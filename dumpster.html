@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumpster Rental - CLEANER</title>
+    <link rel="stylesheet" href="residencial_commercial_dumper.css">
+</head>
+<body>
+    <header class="header">
+       
+    
+        <div class="logo">CLEANER</div>
+    <nav class="nav">
+      <a href="index.html" data-key="nav_commercial">Home</a>
+      <a href="residential.html" data-key="nav_residential">Residential</a>
+      <a href="commercial.html" data-key="nav_commercial">Commercial</a>
+      <a href="dumpster.html" class="active">Dumpster Rental</a>
+            <a href="waste-types.html" data-key="nav_sustainability">Waste-Types</a>
+
+      <a href="about.html" data-key="nav_about">About Us</a>
+    </nav>
+
+    <div class="profile">Profile</div>
+
+
+
+
+        </nav>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </header>
+
+    <main class="dumpster-main">
+        <section class="hero-section">
+            <h1>Dumpster Rental Services</h1>
+            <p>Perfect for construction, renovation, and large clean-up projects</p>
+        </section>
+
+        <section class="dumpster-types">
+            <h2>Available Dumpster Sizes</h2>
+            <div class="dumpster-grid">
+                <div class="dumpster-card">
+                    <img src="image copy 8.png" alt="10 Yard Dumpster">
+                    <h3>10 Yard Dumpster</h3>
+                    <p>Perfect for small projects and cleanups</p>
+                    <ul>
+                        <li>Capacity: 10 cubic yards</li>
+                        <li>Ideal for: Small renovations</li>
+                        <li>Duration: Up to 7 days</li>
+                    </ul>
+                </div>
+                <div class="dumpster-card">
+                    <img src="image copy 9.png" alt="20 Yard Dumpster">
+                    <h3>20 Yard Dumpster</h3>
+                    <p>Great for medium-sized projects</p>
+                    <ul>
+                        <li>Capacity: 20 cubic yards</li>
+                        <li>Ideal for: Home renovations</li>
+                        <li>Duration: Up to 14 days</li>
+                    </ul>
+                </div>
+                <div class="dumpster-card">
+                    <img src="image copy 10.png" alt="30 Yard Dumpster">
+                    <h3>30 Yard Dumpster</h3>
+                    <p>For large construction projects</p>
+                    <ul>
+                        <li>Capacity: 30 cubic yards</li>
+                        <li>Ideal for: Large renovations</li>
+                        <li>Duration: Up to 30 days</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="booking-container">
+                <h2>Rent a Dumpster</h2>
+                <form id="dumpster-booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="dumpster-size">Dumpster Size</label>
+                        <select id="dumpster-size" required>
+                            <option value="">Select size</option>
+                            <option value="10">10 Yard Dumpster</option>
+                            <option value="20">20 Yard Dumpster</option>
+                            <option value="30">30 Yard Dumpster</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date">Start Date</label>
+                        <input type="date" id="start-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Rental Duration (days)</label>
+                        <input type="number" id="duration" min="1" max="30" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-type">Project Type</label>
+                        <select id="project-type" required>
+                            <option value="">Select project type</option>
+                            <option value="construction">Construction</option>
+                            <option value="renovation">Renovation</option>
+                            <option value="cleanup">Cleanup</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special Instructions</label>
+                        <textarea id="notes"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Book Dumpster</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">CLEANER</div>
+            <div class="footer-links">
+                 <a href="index.html">Our services</a>
+                <a href="#">Quick info</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="#">our company</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CLEANER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="booking-status-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Booking Status</h2>
+            <p id="booking-message"></p>
+        </div>
+    </div>
+
+    <script src="dumpster.js"></script>
+</body>
+</html> 

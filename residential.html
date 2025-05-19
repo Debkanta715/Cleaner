@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Waste Pickup - CLEANER</title>
+
+    <link rel="stylesheet" href="residencial_commercial_dumper.css">
+    
+</head>
+<body>
+    <header class="header">
+       
+<!--main nav-->
+
+        <div class="logo">CLEANER</div>
+    <nav class="nav">
+      <a href="index.html" data-key="nav_commercial">Home</a>
+      <a href="residential.html" data-key="nav_residential" class="active">Residential</a>
+      <a href="commercial.html" data-key="nav_commercial">Commercial</a>
+      <a href="dumpster.html">Dumpster Rental</a>
+      <a href="waste-types.html" data-key="nav_sustainability">Waste-Types</a>
+      <a href="about.html" data-key="nav_about">About Us</a>
+    </nav>
+
+    <div class="profile">Profile</div>
+
+<!--end nav-->
+
+
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </header>
+
+    <main class="residential-main">
+        <section class="hero-section">
+            <h1>Residential Waste Pickup Service</h1>
+            <p>Professional waste management solutions for your home</p>
+        </section>
+
+        <section class="booking-section">
+            <div class="booking-container">
+                <h2>Book Your Pickup</h2>
+                <form id="residential-booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-date">Preferred Pickup Date</label>
+                        <input type="date" id="pickup-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="waste-type">Type of Waste</label>
+                        <select id="waste-type" required>
+                            <option value="">Select waste type</option>
+                            <option value="general">General Waste</option>
+                            <option value="recycling">Recycling</option>
+                            <option value="hazardous">Hazardous Waste</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Book Pickup</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>Our Services Include</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="image copy.png" alt="Regular Pickup" width="100px" >
+                    <h3>Regular Pickup</h3>
+                    <p>Weekly or bi-weekly waste collection</p>
+                </div>
+                <div class="feature-card">
+                    <img src="image copy 2.png" alt="Recycling">
+                    <h3>Recycling Service</h3>
+                    <p>Eco-friendly waste management</p>
+                </div>
+                <div class="feature-card">
+                    <img src="image copy 3.png" alt="Special Collection">
+                    <h3>Special Collection</h3>
+                    <p>For large items and special waste</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--footer-->
+    
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">CLEANER</div>
+            <div class="footer-links">
+                <a href="index.html">Our services</a>
+                <a href="#">Quick info</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="#">our company</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CLEANER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="booking-status-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Booking Status</h2>
+            <p id="booking-message"></p>
+        </div>
+    </div>
+
+    <script src="residential.js"></script>
+</body>
+</html> 

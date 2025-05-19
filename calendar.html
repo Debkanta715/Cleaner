@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Pickup - CLEANER</title>
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="residencial_commercial_dumper.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CLEANER</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="residential.html">Residential</a>
+            <a href="commercial.html">Commercial</a>
+            <a href="dumpster.html">Dumpster Rental</a>
+                  <a href="waste-types.html" data-key="nav_sustainability">Waste-Types</a>
+
+            <a href="about.html" class="active">About us</a>
+        </nav>
+        <div class="profile">Profile</div>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </header>
+
+    <main class="calendar-main">
+        <section class="hero-section">
+            <h1>Schedule Your Pickup</h1>
+            <p>Choose your preferred date and time</p>
+        </section>
+
+        <section class="calendar-section">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prev-month" class="calendar-nav">←</button>
+                    <h2 id="current-month">January 2024</h2>
+                    <button id="next-month" class="calendar-nav">→</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="calendar-days">
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                    </div>
+                    <div id="calendar-dates" class="calendar-dates">
+                        <!-- Dates will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="time-slots-container">
+                <h3>Available Time Slots</h3>
+                <div id="time-slots" class="time-slots">
+                    <!-- Time slots will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="booking-summary">
+                <h3>Booking Summary</h3>
+                <div id="selected-date" class="summary-item">
+                    <strong>Date:</strong> <span>Not selected</span>
+                </div>
+                <div id="selected-time" class="summary-item">
+                    <strong>Time:</strong> <span>Not selected</span>
+                </div>
+                <button id="confirm-booking" class="submit-btn" disabled>Confirm Booking</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">CLEANER</div>
+            <div class="footer-links">
+                 <a href="index.html">Our services</a>
+                <a href="#">Quick info</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="#">our company</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CLEANER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="booking-confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Booking Confirmed</h2>
+            <p id="confirmation-message"></p>
+        </div>
+    </div>
+
+    <script src="calendar.js"></script>
+</body>
+</html> 

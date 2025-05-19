@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - CLEANER</title>
+    <link rel="stylesheet" href="residencial_commercial_dumper.css">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CLEANER</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="residential.html">Residential</a>
+            <a href="commercial.html">Commercial</a>
+            <a href="dumpster.html">Dumpster Rental</a>
+      <a href="waste-types.html" data-key="nav_sustainability">Waste-Types</a>
+
+            <a href="about.html" >About us</a>
+        </nav>
+                <div class="profile">profile</div>
+
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </header>
+
+    <main class="feedback-main">
+        <section class="hero-section">
+            <h1>Customer Feedback</h1>
+            <p>Help us improve our services by sharing your experience</p>
+        </section>
+
+        <section class="feedback-section">
+            <div class="feedback-container">
+                <h2>Share Your Experience</h2>
+                <form id="feedback-form" class="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-type">Service Type</label>
+                        <select id="service-type" name="service-type" required>
+                            <option value="">Select a service</option>
+                            <option value="residential">Residential Pickup</option>
+                            <option value="commercial">Commercial Pickup</option>
+                            <option value="dumpster">Dumpster Rental</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Overall Rating</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">★</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback">Your Feedback</label>
+                        <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Would you recommend our service?</label>
+                        <div class="recommendation">
+                            <input type="radio" id="yes" name="recommend" value="yes">
+                            <label for="yes">Yes</label>
+                            <input type="radio" id="no" name="recommend" value="no">
+                            <label for="no">No</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>What Our Customers Say</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Excellent service! The team was professional and efficient. Will definitely use again."</p>
+                    <p class="testimonial-author">- John Smith</p>
+                </div>
+                <div class="feature-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Very reliable and punctual. Great value for money."</p>
+                    <p class="testimonial-author">- Sarah Johnson</p>
+                </div>
+                <div class="feature-card">
+                    <div class="rating">★★★★☆</div>
+                    <p class="testimonial-text">"Good service overall. Could be a bit more flexible with pickup times."</p>
+                    <p class="testimonial-author">- Michael Brown</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">CLEANER</div>
+            <div class="footer-links">
+                <a href="index.html">Our services</a>
+                <a href="#">Quick info</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="#">our company</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CLEANER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Thank You!</h2>
+            <p id="feedback-message">Your feedback has been submitted successfully.</p>
+        </div>
+    </div>
+
+    <script src="feedback.js"></script>
+</body>
+</html> 
