@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Waste Pickup - CLEANER</title>
+    <link rel="stylesheet" href="residencial_commercial_dumper.css">
+</head>
+<body>
+    <header class="header">
+       
+
+        <div class="logo">CLEANER</div>
+    <nav class="nav">
+      <a href="index.html" data-key="nav_commercial">Home</a>
+      <a href="residential.html" data-key="nav_residential">Residential</a>
+      <a href="commercial.html" data-key="nav_commercial" class="active">Commercial</a>
+      <a href="dumpster.html">Dumpster Rental</a>
+            <a href="waste-types.html" data-key="nav_sustainability">Waste-Types</a>
+
+      <a href="about.html" data-key="nav_about">About Us</a>
+    </nav>
+
+    <div class="profile">Profile</div>
+
+
+
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </header>
+
+    <main class="commercial-main">
+        <section class="hero-section">
+            <h1>Commercial Waste Management</h1>
+            <p>Professional waste solutions for your business</p>
+        </section>
+
+        <section class="booking-section">
+            <div class="booking-container">
+                <h2>Book Your Commercial Pickup</h2>
+                <form id="commercial-booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="business-name">Business Name</label>
+                        <input type="text" id="business-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-name">Contact Person</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Business Phone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Business Address</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-type">Type of Business</label>
+                        <select id="business-type" required>
+                            <option value="">Select business type</option>
+                            <option value="retail">Retail</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="office">Office</option>
+                            <option value="industrial">Industrial</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="waste-volume">Estimated Weekly Waste Volume (cubic yards)</label>
+                        <input type="number" id="waste-volume" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-frequency">Preferred Pickup Frequency</label>
+                        <select id="pickup-frequency" required>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="biweekly">Bi-weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Additional Requirements</label>
+                        <textarea id="notes"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Request Service</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>Commercial Services</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="image copy 4.png" alt="Regular Pickup">
+                    <h3>Regular Collection</h3>
+                    <p>Customized pickup schedules for your business</p>
+                </div>
+                <div class="feature-card">
+                    <img src="image copy 6.png" alt="Recycling">
+                    <h3>Commercial Recycling</h3>
+                    <p>Comprehensive recycling solutions</p>
+                </div>
+                <div class="feature-card">
+                    <img src="image copy 3.png" alt="Special Collection">
+                    <h3>Special Waste</h3>
+                    <p>Handling of special and hazardous materials</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">CLEANER</div>
+            <div class="footer-links">
+                <a href="index.html">Our services</a>
+                <a href="#">Quick info</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="#">our company</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CLEANER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="booking-status-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Booking Status</h2>
+            <p id="booking-message"></p>
+        </div>
+    </div>
+
+    <script src="commercial.js"></script>
+</body>
+</html> 

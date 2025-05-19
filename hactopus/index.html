@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WM Inspired Scrollable Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">CLEANER</div>
+    <nav class="nav">
+      <a href="residential.html" data-key="nav_residential">Residential</a>
+      <a href="commercial.html" data-key="nav_commercial">Commercial</a>
+            <a href="waste-types.html" data-key="nav_sustainability">Waste-Types</a>
+
+      <a href="about.html" data-key="nav_about">About Us</a>
+      <a href="#" class="login-btn" id="login-btn" data-key="nav_login">Log In</a>
+    </nav>
+    <div class="lang-switcher">
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="bn">বাংলা</option>
+      </select>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero section">
+    <div class="hero-content">
+      <h1 data-key="hero_title">Help Your Business Become More Sustainable</h1>
+      <p data-key="hero_subtitle">CLEANER partners with small businesses to make their sustainability goals a reality. Take the first step towards a more sustainable business with a limited time promotion.</p>
+      <a href="waste-types.html"><button class="cta" data-key="hero_cta">Start Your Sustainability Journey</button></a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services section">
+    <div class="service-card">
+      <img src="image copy 4.png" alt="Residential" />
+      <h2 data-key="service_residential_title">Residential Waste Pickup</h2>
+      <p data-key="service_residential_desc">Cleaner's curbside trash and recycling pickup is the best choice for your home, and for the environment.</p>
+      <a href="residential.html" class="service-link" data-key="service_residential_link">Get Residential Waste Service</a>
+    </div>
+    <div class="service-card">
+      <img src="image copy 6.png" alt="Commercial" />
+      <h2 data-key="service_commercial_title">Commercial Waste Pickup</h2>
+      <p data-key="service_commercial_desc">Cleaner's business trash and recycling pickup is the best choice for your organization, and for the environment.</p>
+      <a href="commercial.html" class="service-link" data-key="service_commercial_link">Get Commercial Waste Service</a>
+    </div>
+    <div class="service-card">
+      <img src="image copy 7.png" alt="Dumpster" />
+      <h2 data-key="service_dumpster_title">Roll-Off Dumpster Rental</h2>
+      <p data-key="service_dumpster_desc">From quick cleanouts to major renovations, Cleaner has a dumpster that's perfect for your project.</p>
+      <a href="dumpster.html" class="service-link" data-key="service_dumpster_link">Rent a Roll-Off Dumpster</a>
+    </div>
+  </section>
+
+  <!-- Quick Access Section -->
+  <section id="quick-access" class="quick-access section">
+    <h2 data-key="quick_access_title">My Cleaner & More</h2>
+    <p data-key="quick_access_desc">Quick access to My Cleaner and other popular services.</p>
+    <div class="quick-links">
+      <a href="payment.html" class="quick-link">
+        <span class="icon">💳</span>
+        <span data-key="quick_access_payment">Make a Payment</span>
+      </a>
+      
+     
+      <a href="calendar.html" class="quick-link">
+        <span class="icon">📅</span>
+        <span data-key="quick_access_schedule">Pickup Schedule</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer section">
+    <div class="footer-logo">
+      <div class="one">Cleaner</div>
+      <div class="two"><a href="feedback.html">Feedback</a></div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h3 data-key="footer_products">Products & Services</h3>
+        <ul>
+          <li data-key="footer_residential">Residential Trash Collection & Recycling</li>
+          <li data-key="footer_commercial">Commercial Waste Disposal & Recycling</li>
+          <li data-key="footer_dumpster">Roll-Off Dumpster Rental</li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-key="footer_support">Customer Support</h3>
+        <ul>
+          <li data-key="footer_paybill">Pay My Bill</li>
+          <li data-key="footer_billing">Billing & Invoice Help</li>
+          <li data-key="footer_account">Manage My Account</li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-key="footer_info">Quick Info</h3>
+        <ul>
+          <li data-key="footer_recycling">Recycling 101</li>
+          <li data-key="footer_areas">Our Service Areas</li>
+          <li data-key="footer_dropoff">Drop-Off Locations</li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-key="footer_company">Our Company</h3>
+        <ul>
+          <li data-key="footer_who">Who We Are</li>
+          <li data-key="footer_why">Why Cleaner?</li>
+          <li data-key="footer_media">Media Room</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-key="footer_privacy">US Privacy Policy Update Effective November 15, 2024</span>
+    </div>
+  </footer>
+
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-login">&times;</span>
+      <h2 data-key="login_title">Log In</h2>
+      <form class="login-form">
+        <label for="login-email" data-key="login_email">Email</label>
+        <input type="email" id="login-email" required>
+        <label for="login-password" data-key="login_password">Password</label>
+        <input type="password" id="login-password" required>
+        <button type="submit" data-key="login_submit">Log In</button>
+      </form>
+      <div class="login-links">
+        <a href="#" id="signup-link" data-key="login_signup">Sign Up</a> |
+        <a href="#" id="forgot-link" data-key="login_forgot">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-signup">&times;</span>
+      <h2 data-key="signup_title">Sign Up</h2>
+      <form class="signup-form">
+        <label for="signup-name" data-key="signup_name">Name</label>
+        <input type="text" id="signup-name" required>
+        <label for="signup-email" data-key="signup_email">Email</label>
+        <input type="email" id="signup-email" required>
+        <label for="signup-password" data-key="signup_password">Password</label>
+        <input type="password" id="signup-password" required>
+        <button type="submit" data-key="signup_submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <div id="forgot-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-forgot">&times;</span>
+      <h2 data-key="forgot_title">Forgot Password</h2>
+      <form class="forgot-form">
+        <label for="forgot-email" data-key="forgot_email">Email</label>
+        <input type="email" id="forgot-email" required>
+        <button type="submit" data-key="forgot_submit">Send Reset Link</button>
+      </form>
+    </div>
+  </div>
+  <!-- AI Help Floating Button -->
+  <button id="ai-help-btn" class="ai-help-btn">🤖</button>
+  <div id="ai-chat-modal" class="modal ai-chat-modal">
+    <div class="modal-content ai-chat-content">
+      <span class="close" id="close-ai-chat">&times;</span>
+      <h2 data-key="ai_help_title">AI Help Support</h2>
+      <div class="ai-chat-messages" id="ai-chat-messages"></div>
+      <form id="ai-chat-form" class="ai-chat-form">
+        <input type="text" id="ai-chat-input" placeholder="Type your question..." required>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 

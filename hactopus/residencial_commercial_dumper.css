@@ -1,0 +1,795 @@
+/* Global Styles */
+:root {
+  --primary-color: #2ecc71;
+  --secondary-color: #27ae60;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --danger-color: #e74c3c;
+  --success-color: #2ecc71;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --wm-green: #006341;
+  --wm-yellow: #ffd600;
+  --wm-dark: #00321c;
+  --wm-light: #f8f8f3;
+  --wm-gray: #e0e0e0;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: #f9f9f9;
+}
+
+/* Header Styles */
+.header {
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: var(--box-shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+.nav a.active {
+  color: var(--primary-color);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main Content Styles */
+main {
+  margin-top: 70px;
+  padding: 2rem;
+}
+/*
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in;
+}
+*/
+.hero-section {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('image\ copy\ 21.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Form Styles */
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Feature Cards */
+.features-grid,
+.dumpster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feature-card,
+.dumpster-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover,
+.dumpster-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img,
+.dumpster-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 90%;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+ .footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+} 
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--box-shadow);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .booking-form {
+    padding: 1rem;
+  }
+}
+
+/* Additional Styles */
+.lang-switcher {
+  margin-left: 2rem;
+}
+#language-select {
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  border: 1px solid var(--wm-gray);
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+#language-select:hover {
+  border-color: var(--primary-color);
+}
+
+#language-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
+}
+
+.section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
+}
+.section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hero {
+  background: linear-gradient(90deg, var(--wm-green) 60%, var(--wm-yellow) 100%);
+  color: #fff;
+  border-radius: 0 0 2rem 2rem;
+  text-align: left;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.cta {
+  background: var(--wm-yellow);
+  color: var(--wm-dark);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.cta:hover {
+  background: var(--wm-green);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.services {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  flex: 1 1 260px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-card img {
+  width: 70px;
+  margin-bottom: 1rem;
+}
+.service-card h2 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.service-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.service-link {
+  color: var(--wm-green);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.service-link:hover {
+  color: var(--wm-yellow);
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,99,65,0.10);
+}
+
+.quick-access {
+  background: var(--wm-gray);
+  border-radius: 1rem;
+  text-align: center;
+}
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.quick-link {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  color: var(--wm-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+.quick-link:hover {
+  box-shadow: 0 6px 24px rgba(0,99,65,0.10);
+  transform: scale(1.04);
+  color: var(--wm-green);
+}
+.quick-link .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/*footer*/
+
+.footer {
+  background: var(--wm-dark);
+  color: #fff;
+  border-radius: 2rem 2rem 0 0;
+  padding-bottom: 1rem;
+}
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--wm-yellow);
+  margin-bottom: 1.5rem;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.footer-links div {
+  min-width: 180px;
+}
+.footer-links h3 {
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  color: var(--wm-yellow);
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.5rem;
+  font-size: 0.98rem;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-top: 1rem;
+}
+
+/*footer end*/
+
+
+.login-links {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.98rem;
+}
+.login-links a {
+  color: var(--wm-green);
+  text-decoration: underline;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+.login-links a:hover {
+  color: var(--wm-yellow);
+}
+.signup-form label, .forgot-form label {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+.signup-form input, .forgot-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.3rem 0 1rem 0;
+  border: 1px solid var(--wm-gray);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.signup-form button, .forgot-form button {
+  background: var(--wm-green);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.signup-form button:hover, .forgot-form button:hover {
+  background: var(--wm-yellow);
+  color: var(--wm-dark);
+}
+
+/* AI Help Floating Button */
+.ai-help-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--wm-green);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  box-shadow: 0 4px 16px rgba(0,99,65,0.15);
+  cursor: pointer;
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), transform var(--transition);
+}
+.ai-help-btn:hover {
+  background: var(--wm-yellow);
+  color: var(--wm-dark);
+  transform: scale(1.08);
+}
+
+/* AI Chat Modal */
+.ai-chat-modal .modal-content {
+  max-width: 400px;
+  width: 95vw;
+  min-height: 400px;
+  gap: 0.5rem;
+}
+.ai-chat-content {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  max-height: 80vh;
+}
+.ai-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  background: #f4f4f4;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.ai-chat-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.ai-chat-form input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--wm-gray);
+  font-size: 1rem;
+}
+.ai-chat-form button {
+  background: var(--wm-green);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.ai-chat-form button:hover {
+  background: var(--wm-yellow);
+  color: var(--wm-dark);
+}
+
+/* Chat message bubbles */
+.ai-chat-messages .user {
+  align-self: flex-end;
+  background: var(--wm-yellow);
+  color: var(--wm-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem 1rem 0 1rem;
+  max-width: 80%;
+  word-break: break-word;
+}
+.ai-chat-messages .ai {
+  align-self: flex-start;
+  background: var(--wm-green);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem 1rem 1rem 0;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+@media (max-width: 700px) {
+  .ai-help-btn {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+  .modal-content, .ai-chat-modal .modal-content {
+    max-width: 95vw;
+    padding: 1rem 0.5rem;
+  }
+  .ai-chat-content {
+    height: 350px;
+  }
+}
+
+.language-switcher {
+    display: none;
+}
+
+/* Login Modal Styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form label {
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
+}
+
+.login-form button {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive design for language switcher */
+@media (max-width: 768px) {
+    .language-switcher {
+        position: static;
+        margin: 1rem;
+        text-align: right;
+    }
+} 
+
+
+
+/*for responsive*/
+
+
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: var(--box-shadow);
+        z-index: 1000;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--dark-color);
+        padding: 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        color: var(--primary-color);
+    }
+
+    .nav a {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ... existing code ... */

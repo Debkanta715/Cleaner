@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - CLEANER</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="residencial_commercial_dumper.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CLEANER</div>
+        <nav class="nav">
+            <a href="index.html" data-key="nav_commercial">Home</a>
+      <a href="residential.html" data-key="nav_residential">Residential</a>
+      <a href="commercial.html" data-key="nav_commercial">Commercial</a>
+      <a href="dumpster.html">Dumpster Rental</a>
+            <a href="waste-types.html" data-key="nav_sustainability">Waste-Types</a>
+
+      <a href="about.html" data-key="nav_about">About Us</a>
+        </nav>
+
+         <div class="profile">Profile</div>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </header>
+
+    <main class="payment-main">
+        <section class="hero-section">
+            <h1>Make a Payment</h1>
+            <p>Secure and easy payment processing</p>
+        </section>
+
+        <section class="payment-section">
+            <div class="payment-container">
+                <h2>Payment Details</h2>
+                <form id="payment-form" class="payment-form">
+                    <div class="form-group">
+                        <label for="account-number">Account Number</label>
+                        <input type="text" id="account-number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount ($)</label>
+                        <input type="number" id="amount" min="1" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" maxlength="19" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" maxlength="3" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name on Card</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email for Receipt</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Make Payment</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="payment-features">
+            <h2>Secure Payment Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="image copy 11.png" alt="Secure">
+                    <h3>Secure Processing</h3>
+                    <p>Your payment information is encrypted and secure</p>
+                </div>
+                <div class="feature-card">
+                    <img src="image copy 12.png" alt="Instant">
+                    <h3>Instant Confirmation</h3>
+                    <p>Receive immediate payment confirmation</p>
+                </div>
+                <div class="feature-card">
+                    <img src="image copy 13.png" alt="Support">
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">CLEANER</div>
+            <div class="footer-links">
+                <a href="index.html">Our services</a>
+                <a href="#">Quick info</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="#">our company</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CLEANER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="payment-status-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Payment Status</h2>
+            <p id="payment-message"></p>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html> 
